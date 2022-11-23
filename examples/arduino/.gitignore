@@ -4,6 +4,7 @@
 *.hex
 *.hex.asm
 *.elf
+/Project Backups
 *.bin
 *.eep
 *.exe

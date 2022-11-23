@@ -5,7 +5,7 @@ complay with embedded-hal (https://docs.rs/embedded-hal/0.2.7/embedded_hal)
 
 # examples
 
-for arduino and stm32f401 example, provide interrupt sample and busy loop sample.
+for arduino and stm32f401 mcus, provide interrupt sample and busy loop sample.
 
 # attention
 

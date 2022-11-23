@@ -1,0 +1,28 @@
+[package]
+authors = ["flyingyizi <flyingyizi@gmail.com>"]
+edition = "2018"
+name = "stm32-rotary-examples"
+version = "0.1.0"
+publish = false
+
+[dependencies]
+cortex-m = "0.7.4"
+cortex-m-rt = "0.7"
+cortex-m-semihosting = "0.3.3"
+panic-halt = "0.2.0"
+
+# Uncomment for the panic example.
+# panic-itm = "0.4.1"
+
+# Uncomment for the allocator example.
+# alloc-cortex-m = "0.4.0"
+
+embedded-rotary-encoder = { path = "../../../embedded-rotary-encoder"}
+
+stm32f4xx-hal = { version = "0.13.2", default-features = false , features = ["stm32f401"]}
+
+
+[profile.release]
+debug = true
+lto = true
+opt-level = "z"

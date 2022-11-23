@@ -1,0 +1,28 @@
+[package]
+authors = ["flyingyizi <flyingyizi@gmail.com>"]
+edition = "2018"
+name = "avr-rotary-examples"
+version = "0.1.0"
+publish = false
+
+[dependencies]
+panic-halt = "0.2.0"
+ufmt = "0.1.0"
+
+avr-device = {version = "0.3" }
+arduino-hal = {git="https://github.com/rahix/avr-hal",rev="1aacefb335517f85d0de858231e11055d9768cdf",features = ["arduino-nano"]}
+#avr-allocator = {git="https://github.com/flyingyizi/avr-allocator"}
+embedded-rotary-encoder = { path = "../../../embedded-rotary-encoder"}
+
+# Configure the build for minimal size - AVRs have very little program memory
+[profile.dev]
+panic = "abort"
+lto = true
+opt-level = "s"
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+#debug = true
+lto = true
+opt-level = "s"
