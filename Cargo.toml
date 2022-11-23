@@ -1,0 +1,30 @@
+[package]
+name = "embedded-rotary-encoder"
+version = "0.1.0"
+edition = "2021"
+keywords = ["rotary", "encoder", "embedded"]
+
+[dependencies]
+cfg-if = "1.0.0"
+#nb = "1"
+#fugit = "0.3.5"
+#bitflags = "1.3.2"
+#
+#arduino-hal = {git="https://github.com/rahix/avr-hal",rev="1aacefb335517f85d0de858231e11055d9768cdf",optional=true }
+#esp8266-hal = {git = "https://github.com/esp-rs/esp8266-hal" , optional = true}
+#stm32f4xx-hal = { version = "0.13.2", default-features = false , optional = true}
+#cortex-m  = {version = "0.7", optional = true}
+#cortex-m-rt = {version = "0.7", optional = true }
+#avr-device = { version = "0.3", optional = true}
+#void ={version = "*",default-features = false}
+
+embedded-hal = { version = "=0.2.7", features = ["unproven"] }
+
+#[profile.dev]
+#lto       = true
+#opt-level = 1
+#
+#[profile.release]
+#lto       = true
+
+
